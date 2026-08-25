@@ -34,7 +34,7 @@ private readonly DbGames _mycontext;
 
         public async Task Put()
         {
-            
+            await _mycontext.SaveChangesAsync();
         }
 
         public async Task<Jogos?> GetById(int Id)

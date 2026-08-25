@@ -7,10 +7,11 @@ namespace projeto1
          public int Avaliacao {get; set;}
         public string Status {get; set;} = string.Empty;
 
-        public Jogos(string nome, int avaliacao)
+        public Jogos(string nome, int avaliacao, string status)
         {
             Nome = nome;
             Avaliacao = avaliacao;
+            Status = status;
         }
 
     }
