@@ -31,16 +31,30 @@ public class ControllerJogo : ControllerBase
 
     [HttpPost]
 
-    public async Task<IActionResult> Postar()
+    public async Task<IActionResult> Postar(DtoRequest jogodto)
         {
-            
+            var Novojogo = await _service.Post(jogodto);
+
+            if (Novojogo == null)
+            {
+                return BadRequest("Jogo inválido");
+            }
+            return Created("", Novojogo);
+
         }
 
-        [HttpPut]
+        [HttpPut("{Id}")]
 
-        public async Task<IActionResult> Update()
+        public async Task<IActionResult> Update(DtoRequest jogodto, int Id)
         {
-            
+            var jogoAtualizado = await _service.Put(jogodto, Id);
+            if (jogoAtualizado == null)
+            {
+                return NotFound("Usuario não encontrado");
+            }
+
+            return Ok(jogoAtualizado);
+
         }
 
 
@@ -48,10 +62,40 @@ public class ControllerJogo : ControllerBase
 
         [HttpDelete]
 
-        public async Task<IActionResult> Deletar()
+        public async Task<IActionResult> Deletar(int Id)
         {
-            
+            var jogoruim = await _service.Delete(Id);
+
+            if (jogoruim == false)
+            {
+                NotFound("Usuario não encontrado");
+            }
+
+            return Ok("Usuario deletado");
         }
 
+        [HttpGet("{Id:int}")]
+        public async Task<IActionResult> GetById3(int Id)
+        {
+            var jogoPorId = await _service.GetById2(Id);
+            if(jogoPorId == null)
+            {
+                return NotFound("Não encontrado");
+            }
+            return Ok(jogoPorId);
+        }
+        
+
+
+         [HttpGet("{Name}")]
+         public async Task<IActionResult> GetByName(string Name)
+        {
+            var jogoPorNome = await _service.GetByName(Name);
+            if(jogoPorNome == null)
+            {
+                return NotFound("Não encontrado");
+            }
+            return Ok(jogoPorNome);
+        }
 }
 }

@@ -16,18 +16,18 @@ private readonly DbGames _mycontext;
 
     public async Task<List<Jogos>> Get()
     {
-       return await _mycontext.Games.ToListAsync();
+       return await _mycontext.Jogos.ToListAsync();
 
     }
     public async Task<bool> AnyAsync(string Nome)
         {
-            return await _mycontext.Games.AnyAsync(n => n.Nome == Nome);
+            return await _mycontext.Jogos.AnyAsync(n => n.Nome == Nome);
         }
 
 
     public async Task Post(Jogos jogo)
         {
-            _mycontext.Games.Add(jogo);
+            _mycontext.Jogos.Add(jogo);
             await _mycontext.SaveChangesAsync();
         }
 
@@ -37,17 +37,24 @@ private readonly DbGames _mycontext;
             await _mycontext.SaveChangesAsync();
         }
 
-        public async Task<Jogos?> GetById(int Id)
+        public async Task<Jogos?> GetById1(int Id)
         {
-            return await _mycontext.Games.FindAsync(Id);
+            return await _mycontext.Jogos.FindAsync(Id);
         }
         public async Task Delete(Jogos jogo)
         {
           
 
-            _mycontext.Games.Remove(jogo);
+            _mycontext.Jogos.Remove(jogo);
             await _mycontext.SaveChangesAsync();
         }
+
+        
+        public async Task<Jogos?> GetByName(string Name)
+        {
+            return await _mycontext.Jogos.FindAsync(Name);
+        }
+
 
 }
 }

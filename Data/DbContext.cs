@@ -12,7 +12,7 @@ namespace projeto1
             
 
         }
-        public DbSet<Jogos> Games{get; set;}
+        public DbSet<Jogos> Jogos{get; set;}
         
 
     }

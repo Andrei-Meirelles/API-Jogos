@@ -58,7 +58,7 @@ namespace projeto1
         }
         public async Task<Jogos?> Put(DtoRequest jogodto, int Id)
         {
-           var jogolegal = await _repository.GetById(Id);
+           var jogolegal = await _repository.GetById1(Id);
            if (jogolegal == null)
             {
                 return null;
@@ -74,7 +74,7 @@ namespace projeto1
 
         public async Task<bool> Delete(int Id)
         {
-            var jogoDeletar = await _repository.GetById(Id);
+            var jogoDeletar = await _repository.GetById1(Id);
             if(jogoDeletar == null)
             {
                 return false;
@@ -85,11 +85,18 @@ namespace projeto1
             return true;
         }
 
-        public async Task<Jogos?> GetById(int Id)
+        public async Task<Jogos?> GetById2(int Id)
         {
-            return await _repository.GetById(Id);
+            return await _repository.GetById1(Id);
 
             
         }
+
+        
+        public async Task<Jogos?> GetByName(string Name)
+        {
+            return await _repository.GetByName(Name);
+        }
+
     }
 }
