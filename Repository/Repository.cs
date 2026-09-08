@@ -14,7 +14,7 @@ private readonly DbGames _mycontext;
         _mycontext = mycontext;
     }
 
-    public async Task<List<Jogos>> Get()
+    public async Task<List<Jogos>> Get1()
     {
        return await _mycontext.Jogos.ToListAsync();
 

@@ -18,9 +18,9 @@ public class ControllerJogo : ControllerBase
         }
 
     [HttpGet]
-    public async Task<IActionResult> Get()
+    public async Task<IActionResult> Get3()
         {
-            var jogos = await _service.Get();
+            var jogos = await _service.Get2();
             if (jogos.Count == 0)
             {
                 return NotFound("Lista vazia");

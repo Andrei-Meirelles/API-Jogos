@@ -14,6 +14,12 @@ namespace projeto1
         }
         public DbSet<Jogos> Jogos{get; set;}
         
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Jogos>()
+             .Property(j => j.Status)
+             .HasConversion<string>();
+        }
 
     }
 }

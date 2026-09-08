@@ -12,25 +12,12 @@ namespace projeto1
             _repository = repository;
         }
 
-        public async Task<List<DtoResponse>> Get()
+        public async Task<List<Jogos>> Get2()
         {
-            var jogos = await _repository.Get();
-          
-           var jogossemid = jogos.Select(j => new DtoResponse
-           {
-            Nome = j.Nome,
-            Avaliacao = j.Avaliacao,
-            Status = j.Status
+            var jogos = await _repository.Get1();
+         
 
-
-
-
-           }).ToList();
-            {
-                
-            };
-
-            return jogossemid;
+            return jogos;
 
             
         }
@@ -49,7 +36,7 @@ namespace projeto1
                 
             }
 
-            var jogonovo = new Jogos(jogodto.Nome, jogodto.Avaliacao, jogodto.Status);
+            var jogonovo = new Jogos(jogodto.Nome, jogodto.Avaliacao);
 
             await _repository.Post(jogonovo);
 
