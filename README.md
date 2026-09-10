@@ -1,10 +1,10 @@
-# GameLibraryAPI 🎮
+# GameLibraryAPI 
 
 REST API desenvolvida em C# com ASP.NET Core para gerenciamento de uma biblioteca de jogos.
 
 O projeto permite cadastrar, consultar, atualizar e remover jogos, utilizando SQL Server para persistência dos dados.
 
-## 🚀 Tecnologias
+##  Tecnologias
 
 - C#
 - .NET / ASP.NET Core
@@ -13,7 +13,7 @@ O projeto permite cadastrar, consultar, atualizar e remover jogos, utilizando SQ
 - Swagger / OpenAPI
 - REST API
 
-## 📌 Funcionalidades
+##  Funcionalidades
 
 - [x] Cadastrar jogos
 - [x] Listar jogos
@@ -26,7 +26,7 @@ O projeto permite cadastrar, consultar, atualizar e remover jogos, utilizando SQ
 - [x] Enum para status do jogo
 - [x] Documentação dos endpoints com Swagger
 
-## 🎮 Dados do jogo
+##  Dados do jogo
 
 Cada jogo possui informações como:
 
@@ -40,7 +40,7 @@ Os possíveis status são:
 - `Zerado`
 - `Abandonado`
 
-## 🏗️ Estrutura
+##  Estrutura
 
 O projeto utiliza uma separação de responsabilidades entre:
 
@@ -50,11 +50,11 @@ O projeto utiliza uma separação de responsabilidades entre:
 - **DTOs** → controlam os dados recebidos e enviados pela API.
 - **Models** → representam as entidades utilizadas pela aplicação.
 
-## 🗄️ Banco de dados
+##  Banco de dados
 
 O projeto utiliza **SQL Server** com **Entity Framework Core** para acesso e persistência dos dados.
 
-## 📖 Documentação
+##  Documentação
 
 A API possui documentação interativa através do Swagger.
 
