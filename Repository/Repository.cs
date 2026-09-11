@@ -14,9 +14,9 @@ private readonly DbGames _mycontext;
         _mycontext = mycontext;
     }
 
-    public async Task<List<Jogos>> Get1()
+    public async Task<List<Jogos>> Get1(int page, int pagesize)
     {
-       return await _mycontext.Jogos.ToListAsync();
+            return await _mycontext.Jogos.Skip(page).Take(pagesize).ToListAsync();
 
     }
     public async Task<bool> AnyAsync(string Nome)

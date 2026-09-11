@@ -18,9 +18,9 @@ namespace projeto1
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get3()
+        public async Task<IActionResult> Get3(int page = 1, int pagesize = 10)
         {
-            var jogos = await _service.Get2();
+            var jogos = await _service.Get2(page, pagesize);
             if (jogos.Count == 0)
             {
                 return NotFound("Lista vazia");
@@ -60,7 +60,7 @@ namespace projeto1
 
 
 
-        [HttpDelete]
+        [HttpDelete("{Id}")]
 
         public async Task<IActionResult> Deletar(int Id)
         {

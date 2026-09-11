@@ -12,14 +12,22 @@ namespace projeto1
             _repository = repository;
         }
 
-        public async Task<List<Jogos>> Get2()
-        {
-            var jogos = await _repository.Get1();
-         
+        public async Task<List<Jogos>> Get2(
 
-            return jogos;
+            int page = 1,
+            int pagesize = 10)
 
-            
+        { 
+            int skip = (page - 1) * pagesize;
+
+            return await _repository.Get1(skip, pagesize);
+
+
+
+
+
+
+
         }
 
         public async Task<Jogos?> Post(DtoRequest jogodto)
