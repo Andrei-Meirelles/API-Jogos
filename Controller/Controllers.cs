@@ -4,21 +4,21 @@ using System;
 namespace projeto1
 {
 
-[ApiController]
+    [ApiController]
 
-[Route("api/[Controller]")]
+    [Route("api/[Controller]")]
 
-public class ControllerJogo : ControllerBase
-{
-    private readonly JogosService _service;
+    public class ControllerJogo : ControllerBase
+    {
+        private readonly JogosService _service;
 
-    public ControllerJogo(JogosService service)
+        public ControllerJogo(JogosService service)
         {
             _service = service;
         }
 
-    [HttpGet]
-    public async Task<IActionResult> Get3()
+        [HttpGet]
+        public async Task<IActionResult> Get3()
         {
             var jogos = await _service.Get2();
             if (jogos.Count == 0)
@@ -26,18 +26,18 @@ public class ControllerJogo : ControllerBase
                 return NotFound("Lista vazia");
             }
             return Ok(jogos);
-            
+
         }
 
-    [HttpPost]
+        [HttpPost("Status")]
 
-    public async Task<IActionResult> Postar(DtoRequest jogodto)
+    public async Task<IActionResult> Postar([FromForm] DtoRequest jogodto)
         {
             var Novojogo = await _service.Post(jogodto);
 
             if (Novojogo == null)
             {
-                return BadRequest("Jogo inválido");
+                return BadRequest("Informações inválidas");
             }
             return Created("", Novojogo);
 
@@ -45,7 +45,7 @@ public class ControllerJogo : ControllerBase
 
         [HttpPut("{Id}")]
 
-        public async Task<IActionResult> Update(DtoRequest jogodto, int Id)
+        public async Task<IActionResult> Update([FromForm]DtoRequest jogodto, int Id)
         {
             var jogoAtualizado = await _service.Put(jogodto, Id);
             if (jogoAtualizado == null)

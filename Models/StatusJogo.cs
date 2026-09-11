@@ -1,6 +1,9 @@
-public enum StatusJogo
+namespace projeto1
 {
-    Jogando,
-    Zerado,
-    Abandonado
+    public enum StatusJogo
+    {
+        Jogando,
+        Zerado,
+        Abandonado
+    }
 }

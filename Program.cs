@@ -19,7 +19,10 @@ builder.Services.AddControllers()
             new JsonStringEnumConverter());
     });
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.UseInlineDefinitionsForEnums();
+});
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<JogosService>();
@@ -37,9 +40,10 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
-app.MapControllers();
 
+app.MapControllers();
+app.UseHttpsRedirection();
+    
 
 app.Run();
 

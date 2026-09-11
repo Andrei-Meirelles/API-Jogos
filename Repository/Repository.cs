@@ -52,7 +52,7 @@ private readonly DbGames _mycontext;
         
         public async Task<Jogos?> GetByName(string Name)
         {
-            return await _mycontext.Jogos.FindAsync(Name);
+            return await _mycontext.Jogos.FirstOrDefaultAsync(n => n.Nome == Name);
         }
 
 

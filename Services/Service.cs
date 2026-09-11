@@ -36,7 +36,7 @@ namespace projeto1
                 
             }
 
-            var jogonovo = new Jogos(jogodto.Nome, jogodto.Avaliacao);
+            var jogonovo = new Jogos(jogodto.Nome, jogodto.Avaliacao, jogodto.Status);
 
             await _repository.Post(jogonovo);
 

@@ -11,11 +11,11 @@ namespace projeto1
          public int Avaliacao {get; set;}
         public StatusJogo Status {get; set;}
 
-        public Jogos(string nome, int avaliacao)
+        public Jogos(string nome, int avaliacao, StatusJogo status)
         {
             Nome = nome;
             Avaliacao = avaliacao;
-           
+            Status = status;
         }
 
     }
