@@ -30,25 +30,28 @@ namespace projeto1
 
         }
 
-        public async Task<Jogos?> Post(DtoRequest jogodto)
+        public async Task<(Jogos? jogos, string? erro)> Post(DtoRequest jogodto)
         {
             if (jogodto == null)
             {
-                return null;
+                return (null, "Informações inválidas");
             }
 
             var nomeIgual = await _repository.AnyAsync(jogodto.Nome);
             if(nomeIgual)
             {
-                return null;
-                
+
+               
+                return (null, "Jogo ja existente");
+              
+
             }
 
             var jogonovo = new Jogos(jogodto.Nome, jogodto.Avaliacao, jogodto.Status);
 
             await _repository.Post(jogonovo);
 
-            return jogonovo;
+            return (jogonovo, null);
 
         }
         public async Task<Jogos?> Put(DtoRequest jogodto, int Id)

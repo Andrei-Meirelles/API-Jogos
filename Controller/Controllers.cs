@@ -35,11 +35,15 @@ namespace projeto1
         {
             var Novojogo = await _service.Post(jogodto);
 
-            if (Novojogo == null)
+            if (Novojogo.jogos == null)
             {
-                return BadRequest("Informações inválidas");
+                return BadRequest(Novojogo.erro);
             }
-            return Created("", Novojogo);
+            else if (Novojogo.jogos == null)
+            {
+                return BadRequest(Novojogo.erro);
+            }
+            return Created("Novojogo", Novojogo.jogos);
 
         }
 
