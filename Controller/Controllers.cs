@@ -54,7 +54,7 @@ namespace projeto1
             var jogoAtualizado = await _service.Put(jogodto, Id);
             if (jogoAtualizado == null)
             {
-                return NotFound("Usuario não encontrado");
+                return NotFound("Jogo não encontrado");
             }
 
             return Ok(jogoAtualizado);
@@ -72,10 +72,10 @@ namespace projeto1
 
             if (jogoruim == false)
             {
-                NotFound("Usuario não encontrado");
+               return NotFound("Jogo não encontrado");
             }
 
-            return Ok("Usuario deletado");
+            return Ok("Jogo deletado");
         }
 
         [HttpGet("{Id:int}")]
@@ -84,7 +84,7 @@ namespace projeto1
             var jogoPorId = await _service.GetById2(Id);
             if(jogoPorId == null)
             {
-                return NotFound("Não encontrado");
+                return NotFound("Jogo Não encontrado");
             }
             return Ok(jogoPorId);
         }
@@ -97,7 +97,7 @@ namespace projeto1
             var jogoPorNome = await _service.GetByName(Name);
             if(jogoPorNome == null)
             {
-                return NotFound("Não encontrado");
+                return NotFound("Jogo Não encontrado");
             }
             return Ok(jogoPorNome);
         }
