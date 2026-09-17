@@ -25,7 +25,7 @@ O projeto permite cadastrar, consultar, atualizar e remover jogos, utilizando SQ
 - [x] Paginação
 - [x] Enum para status do jogo
 - [x] Documentação dos endpoints com Swagger
-- [x] Data Migration
+- [x] Migration
 
 ##  Dados do jogo
 
