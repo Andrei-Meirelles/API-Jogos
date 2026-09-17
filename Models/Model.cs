@@ -8,10 +8,10 @@ namespace projeto1
         public int Id {get; set;}
 
         public string Nome {get; set;} = string.Empty;
-         public int Avaliacao {get; set;}
+         public decimal Avaliacao {get; set;}
         public StatusJogo Status {get; set;}
 
-        public Jogos(string nome, int avaliacao, StatusJogo status)
+        public Jogos(string nome, decimal avaliacao, StatusJogo status)
         {
             Nome = nome;
             Avaliacao = avaliacao;
