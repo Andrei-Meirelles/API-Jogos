@@ -21,7 +21,7 @@ namespace projeto1
         [Required]
         [DefaultValue(10)]
         [SwaggerSchema(Description = "Avaliação do jogo")]
-        [Range(0,10)]
+        [Range(0,10.1)]
         public decimal Avaliacao {get; set;}
 
 

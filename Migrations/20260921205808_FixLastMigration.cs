@@ -5,7 +5,7 @@
 namespace projeto1.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateColumnAvaliacao : Migration
+    public partial class FixLastMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -13,22 +13,22 @@ namespace projeto1.Migrations
             migrationBuilder.AlterColumn<decimal>(
                 name: "Avaliacao",
                 table: "Jogos",
-                type: "decimal(3,2)",
+                type: "decimal(4,2)",
                 nullable: false,
-                oldClrType: typeof(int),
-                oldType: "int");
+                oldClrType: typeof(decimal),
+                oldType: "decimal(3,2)");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<int>(
+            migrationBuilder.AlterColumn<decimal>(
                 name: "Avaliacao",
                 table: "Jogos",
-                type: "int",
+                type: "decimal(3,2)",
                 nullable: false,
                 oldClrType: typeof(decimal),
-                oldType: "decimal(18,2)");
+                oldType: "decimal(4,2)");
         }
     }
 }

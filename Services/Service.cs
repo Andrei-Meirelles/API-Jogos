@@ -57,7 +57,8 @@ namespace projeto1
         public async Task<Jogos?> Put(DtoRequest jogodto, int Id)
         {
            var jogolegal = await _repository.GetById1(Id);
-           if (jogolegal == null)
+            
+            if (jogolegal == null)
             {
                 return null;
             }

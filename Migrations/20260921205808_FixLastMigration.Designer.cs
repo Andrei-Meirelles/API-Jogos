@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using projeto1;
 
@@ -10,9 +11,11 @@ using projeto1;
 namespace projeto1.Migrations
 {
     [DbContext(typeof(DbGames))]
-    partial class DbGamesModelSnapshot : ModelSnapshot
+    [Migration("20260921205808_FixLastMigration")]
+    partial class FixLastMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
