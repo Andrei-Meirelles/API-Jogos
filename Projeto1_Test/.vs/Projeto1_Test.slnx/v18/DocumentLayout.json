@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\Projeto1_Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F83D77-0848-2F9B-0FEA-0AAB38F4CDEF}|Projeto1_Test\\Projeto1_Test.csproj|c:\\users\\andrei\\documents\\projetos pessoais\\projeto 1\\projeto1_test\\projeto1_test\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8F83D77-0848-2F9B-0FEA-0AAB38F4CDEF}|Projeto1_Test\\Projeto1_Test.csproj|solutionrelative:projeto1_test\\test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE9D965-699F-436F-5E8A-40360F4B4834}|..\\projeto1\\projeto1.csproj|c:\\users\\andrei\\documents\\projetos pessoais\\projeto 1\\projeto1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE9D965-699F-436F-5E8A-40360F4B4834}|..\\projeto1\\projeto1.csproj|c:\\users\\andrei\\documents\\projetos pessoais\\projeto 1\\projeto1\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE9D965-699F-436F-5E8A-40360F4B4834}|..\\projeto1\\projeto1.csproj|c:\\users\\andrei\\documents\\projetos pessoais\\projeto 1\\projeto1\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\projeto1\\Program.cs",
+              "RelativeDocumentMoniker": "..\\projeto1\\Program.cs",
+              "ToolTip": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\projeto1\\Program.cs",
+              "RelativeToolTip": "..\\projeto1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T16:24:43.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\projeto1\\Data\\DbContext.cs",
+              "RelativeDocumentMoniker": "..\\projeto1\\Data\\DbContext.cs",
+              "ToolTip": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\projeto1\\Data\\DbContext.cs",
+              "RelativeToolTip": "..\\projeto1\\Data\\DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T20:06:43.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\projeto1\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "..\\projeto1\\Repository\\Repository.cs",
+              "ToolTip": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\projeto1\\Repository\\Repository.cs",
+              "RelativeToolTip": "..\\projeto1\\Repository\\Repository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T20:05:31.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test1.cs",
+              "DocumentMoniker": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\Projeto1_Test\\Projeto1_Test\\Test1.cs",
+              "RelativeDocumentMoniker": "Projeto1_Test\\Test1.cs",
+              "ToolTip": "C:\\Users\\Andrei\\Documents\\Projetos Pessoais\\Projeto 1\\Projeto1_Test\\Projeto1_Test\\Test1.cs",
+              "RelativeToolTip": "Projeto1_Test\\Test1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-08T19:40:50.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
